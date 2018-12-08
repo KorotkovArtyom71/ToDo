@@ -93,8 +93,6 @@ class AddNewToDoViewController: UIViewController, UITextFieldDelegate, UICollect
             cell.imageView.alpha = 0.0
         }
         cell.rootView.layer.cornerRadius = 25
-        //print(cell.frame)
-        //print(cell.rootView)
         return cell
     }
     
