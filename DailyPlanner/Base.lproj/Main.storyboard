@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r0K-Ia-hGx">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Priority-->
+        <scene sceneID="ilf-vV-xmb">
+            <objects>
+                <viewController id="KZT-HO-SIW" customClass="OtherPlansFromTabBarViewController" customModule="DailyPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X28-is-EKq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eMP-4a-uSE"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Priority" image="priority_tab_bar" id="WIB-Xv-d36"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XU0-E8-FIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="-596"/>
+        </scene>
+        <!--Week Days From Tab Bar View Controller-->
+        <scene sceneID="gSe-eb-0bs">
+            <objects>
+                <viewController id="Ubj-Ji-5aN" customClass="WeekDaysFromTabBarViewController" customModule="DailyPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6o-EY-2hq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TGS-XI-VkW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Week Day Cell Identifier" rowHeight="90" id="x0A-vo-T86" customClass="WeekDayTableViewCell" customModule="DailyPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x0A-vo-T86" id="nJK-Kh-u4G">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9c-3Y-6aS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="89" height="89.666666666666671"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="03.09" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehd-Ki-7Sk">
+                                                            <rect key="frame" x="22" y="60" width="45" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ПН" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKV-uh-ZGE">
+                                                            <rect key="frame" x="14" y="8" width="61" height="48"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="89" id="3uG-hs-aIP"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ещё много дел!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkZ-CL-Gxc">
+                                                    <rect key="frame" x="97" y="11" width="177" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0/0 задач" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOU-dJ-Fq7">
+                                                    <rect key="frame" x="97" y="41" width="77" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="o5z-yB-XUS">
+                                                    <rect key="frame" x="97" y="70" width="150" height="2"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </progressView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7r-8L-MJk">
+                                                    <rect key="frame" x="355" y="28" width="33" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="add_button_icon"/>
+                                                    <connections>
+                                                        <action selector="addNewToDo:" destination="x0A-vo-T86" eventType="touchUpInside" id="rz4-iJ-juZ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="K9c-3Y-6aS" firstAttribute="top" secondItem="nJK-Kh-u4G" secondAttribute="top" id="1cq-WT-qpG"/>
+                                                <constraint firstItem="K9c-3Y-6aS" firstAttribute="leading" secondItem="nJK-Kh-u4G" secondAttribute="leading" id="gF8-j8-3gw"/>
+                                                <constraint firstAttribute="bottom" secondItem="K9c-3Y-6aS" secondAttribute="bottom" id="sIz-dM-xt5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="Ehd-Ki-7Sk" id="WpI-uC-dRf"/>
+                                            <outlet property="dayLabel" destination="zKV-uh-ZGE" id="lFq-gd-EgP"/>
+                                            <outlet property="numberOfMadeToDosLabel" destination="WOU-dJ-Fq7" id="nJr-4M-Iok"/>
+                                            <outlet property="rootDayView" destination="K9c-3Y-6aS" id="XU0-ba-aJx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TGS-XI-VkW" firstAttribute="leading" secondItem="9Gd-Cg-RZ0" secondAttribute="leading" id="6fJ-m4-icG"/>
+                            <constraint firstItem="TGS-XI-VkW" firstAttribute="top" secondItem="9Gd-Cg-RZ0" secondAttribute="top" id="YaW-SC-sFZ"/>
+                            <constraint firstItem="9Gd-Cg-RZ0" firstAttribute="trailing" secondItem="TGS-XI-VkW" secondAttribute="trailing" id="rV5-dO-dcp"/>
+                            <constraint firstItem="9Gd-Cg-RZ0" firstAttribute="bottom" secondItem="TGS-XI-VkW" secondAttribute="bottom" id="z3x-at-epH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Gd-Cg-RZ0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KFc-Sm-anj"/>
+                    <connections>
+                        <outlet property="weekTableView" destination="TGS-XI-VkW" id="M2W-Lv-8yL"/>
+                        <segue destination="Or7-h1-8Nq" kind="show" identifier="Adding New ToDo Segue" id="Tj7-7w-jaa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajZ-oa-cZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313.0434782608697" y="-1333.2589285714284"/>
+        </scene>
+        <!--Add New To Do View Controller-->
+        <scene sceneID="S2S-JV-a24">
+            <objects>
+                <viewController id="Or7-h1-8Nq" customClass="AddNewToDoViewController" customModule="DailyPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eIe-Tv-mDf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oqn-nG-516">
+                                <rect key="frame" x="24" y="134" width="366" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ofn-VT-muC">
+                                <rect key="frame" x="24" y="384" width="366" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gtp-0h-0de">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Color Choose Collection View Cell Identifier" id="KFt-wZ-X6n" customClass="ChooseColorCollectionViewCell" customModule="DailyPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kff-xM-Aha">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acw-rc-rux" customClass="UIImageView">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="imageView" destination="acw-rc-rux" id="KJX-x7-Y0n"/>
+                                            <outlet property="rootView" destination="kff-xM-Aha" id="3pq-et-j1T"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uK7-l4-7mV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ky0-CB-8Ex">
+                        <barButtonItem key="rightBarButtonItem" image="check_button_icon" id="hiw-II-EWS">
+                            <inset key="imageInsets" minX="12" minY="2" maxX="-12" maxY="-6"/>
+                            <connections>
+                                <action selector="addNewToDoButton:" destination="Or7-h1-8Nq" id="qfn-mH-9Zm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chooseColorCollectionView" destination="ofn-VT-muC" id="65v-9F-bHX"/>
+                        <outlet property="textField" destination="oqn-nG-516" id="Zul-Mi-8gC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ut-Cv-H50" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2269.5652173913045" y="-1333.2589285714284"/>
+        </scene>
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="wUg-3L-gco">
+            <objects>
+                <tabBarController id="r0K-Ia-hGx" customClass="MainTabBarViewController" customModule="DailyPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iJK-3p-KA3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="f1b-U4-bTf" kind="relationship" relationship="viewControllers" id="IQp-Y4-4td"/>
+                        <segue destination="KZT-HO-SIW" kind="relationship" relationship="viewControllers" id="VyK-uY-u5M"/>
+                        <segue destination="iwq-E7-gF1" kind="relationship" relationship="viewControllers" id="ShM-fC-10T"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGp-wp-uVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-521" y="-226"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="qZv-SH-r28">
+            <objects>
+                <viewController id="iwq-E7-gF1" customClass="CalendarFromTabBarViewController" customModule="DailyPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qnp-RZ-1gO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lFB-lG-DGJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar_tab_bar" id="bPM-Ie-YzA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igx-9S-k3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="99"/>
+        </scene>
+        <!--To-do List-->
+        <scene sceneID="aZY-D4-sZC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f1b-U4-bTf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="To-do List" image="to_do_tab_bar" id="mx0-LH-QSy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J8O-EY-IjA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ubj-Ji-5aN" kind="relationship" relationship="rootViewController" id="odQ-sa-6Nq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s3B-b7-RJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402.89855072463769" y="-1333.2589285714284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add_button_icon" width="33.635036468505859" height="33.635036468505859"/>
+        <image name="calendar_tab_bar" width="418.90908813476562" height="418.90908813476562"/>
+        <image name="check_button_icon" width="78.101692199707031" height="78.101692199707031"/>
+        <image name="priority_tab_bar" width="242.52632141113281" height="242.52632141113281"/>
+        <image name="to_do_tab_bar" width="51.775279998779297" height="51.775279998779297"/>
+    </resources>
+</document>
