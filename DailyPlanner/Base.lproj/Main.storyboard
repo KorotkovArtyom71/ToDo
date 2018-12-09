@@ -106,6 +106,7 @@
                                             <outlet property="dayLabel" destination="zKV-uh-ZGE" id="lFq-gd-EgP"/>
                                             <outlet property="numberOfMadeToDosLabel" destination="WOU-dJ-Fq7" id="nJr-4M-Iok"/>
                                             <outlet property="rootDayView" destination="K9c-3Y-6aS" id="XU0-ba-aJx"/>
+                                            <segue destination="roE-pP-p57" kind="show" identifier="Show Day Plans" id="HF2-lh-ZY0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -129,6 +130,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajZ-oa-cZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1313.0434782608697" y="-1333.2589285714284"/>
+        </scene>
+        <!--Plans For Some Day View Controller-->
+        <scene sceneID="oa7-nk-5cG">
+            <objects>
+                <viewController id="roE-pP-p57" customClass="PlansForSomeDayViewController" customModule="DailyPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ffb-A7-UtW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="e03-HG-Ch2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="paV-rb-qTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2296" y="-1798"/>
         </scene>
         <!--Add New To Do View Controller-->
         <scene sceneID="S2S-JV-a24">
@@ -203,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ut-Cv-H50" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2269.5652173913045" y="-1333.2589285714284"/>
+            <point key="canvasLocation" x="2296" y="-1110"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="wUg-3L-gco">

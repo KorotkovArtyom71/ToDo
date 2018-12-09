@@ -109,6 +109,16 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
                     }
                 }
             }
+        } else {
+            if segue.identifier == "Show Day Plans" {
+                if let cell = sender as? WeekDayTableViewCell {
+                    if let indexPath = weekTableView.indexPath(for: cell) {
+                        if let vc = segue.destination.contents as? PlansForSomeDayViewController {
+                            
+                        }
+                    }
+                }
+            }
         }
     }
     
