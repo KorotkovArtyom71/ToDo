@@ -23,6 +23,7 @@
 		3BEFCC4221BBDC960092AA0D /* AddNewToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFCC4121BBDC960092AA0D /* AddNewToDoViewController.swift */; };
 		3BEFCC4421BC167B0092AA0D /* ChooseColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFCC4321BC167B0092AA0D /* ChooseColorCollectionViewCell.swift */; };
 		3BEFCC4621BD65980092AA0D /* PlansForSomeDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFCC4521BD65980092AA0D /* PlansForSomeDayViewController.swift */; };
+		3BEFCC4821BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFCC4721BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		3BEFCC4121BBDC960092AA0D /* AddNewToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToDoViewController.swift; sourceTree = "<group>"; };
 		3BEFCC4321BC167B0092AA0D /* ChooseColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BEFCC4521BD65980092AA0D /* PlansForSomeDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansForSomeDayViewController.swift; sourceTree = "<group>"; };
+		3BEFCC4721BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansForSomeDayTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			children = (
 				3BE3764221B7A777003F05E9 /* AppDelegate.swift */,
 				3BE3764621B7A777003F05E9 /* Main.storyboard */,
+				3BEFCC4721BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift */,
 				3BEFCC4521BD65980092AA0D /* PlansForSomeDayViewController.swift */,
 				3BEFCC4321BC167B0092AA0D /* ChooseColorCollectionViewCell.swift */,
 				3BE3766A21B9947E003F05E9 /* WeekDayTableViewCell.swift */,
@@ -197,6 +200,7 @@
 				3BE3765F21B7FB5E003F05E9 /* OtherPlansFromTabBarViewController.swift in Sources */,
 				3BEFCC4621BD65980092AA0D /* PlansForSomeDayViewController.swift in Sources */,
 				3BE3765521B7A809003F05E9 /* DailyPlan.swift in Sources */,
+				3BEFCC4821BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

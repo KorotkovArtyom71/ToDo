@@ -114,7 +114,7 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
                 if let cell = sender as? WeekDayTableViewCell {
                     if let indexPath = weekTableView.indexPath(for: cell) {
                         if let vc = segue.destination.contents as? PlansForSomeDayViewController {
-                            
+                            vc.day = DaysManager.shared.dayForDate(for: dateArray[indexPath.row])
                         }
                     }
                 }

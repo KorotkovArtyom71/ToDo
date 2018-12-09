@@ -138,13 +138,65 @@
                     <view key="view" contentMode="scaleToFill" id="Ffb-A7-UtW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Smo-KF-wcF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDo For Some Day Identifier" rowHeight="88" id="BwT-uz-K5g" customClass="PlansForSomeDayTableViewCell" customModule="DailyPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BwT-uz-K5g" id="paW-I5-VxQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="87.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjD-da-JxJ">
+                                                    <rect key="frame" x="68" y="18" width="277" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgq-hs-SXR">
+                                                    <rect key="frame" x="352" y="18" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4m-qt-442">
+                                                    <rect key="frame" x="10" y="18" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <connections>
+                                                        <action selector="isCompletedButton:" destination="BwT-uz-K5g" eventType="touchUpInside" id="JSf-QS-F7a"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="importanColorView" destination="pgq-hs-SXR" id="e8B-wR-VLR"/>
+                                            <outlet property="isCompletedLabel" destination="Y4m-qt-442" id="xzX-CL-OKG"/>
+                                            <outlet property="planTitle" destination="QjD-da-JxJ" id="AXO-HG-aZd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e03-HG-Ch2" firstAttribute="bottom" secondItem="Smo-KF-wcF" secondAttribute="bottom" id="JuJ-5J-Vad"/>
+                            <constraint firstItem="e03-HG-Ch2" firstAttribute="trailing" secondItem="Smo-KF-wcF" secondAttribute="trailing" id="TVa-lr-WGI"/>
+                            <constraint firstItem="Smo-KF-wcF" firstAttribute="leading" secondItem="e03-HG-Ch2" secondAttribute="leading" id="l22-Kw-9ar"/>
+                            <constraint firstItem="Smo-KF-wcF" firstAttribute="top" secondItem="e03-HG-Ch2" secondAttribute="top" id="olS-gL-CFc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="e03-HG-Ch2"/>
                     </view>
+                    <connections>
+                        <outlet property="plansTableView" destination="Smo-KF-wcF" id="lHS-AW-UIh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paV-rb-qTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2296" y="-1798"/>
+            <point key="canvasLocation" x="2295.6521739130435" y="-1798.6607142857142"/>
         </scene>
         <!--Add New To Do View Controller-->
         <scene sceneID="S2S-JV-a24">
