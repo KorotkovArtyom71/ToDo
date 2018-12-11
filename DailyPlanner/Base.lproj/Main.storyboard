@@ -28,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="404" y="-596"/>
         </scene>
-        <!--Week Days From Tab Bar View Controller-->
+        <!--To-do List-->
         <scene sceneID="gSe-eb-0bs">
             <objects>
                 <viewController id="Ubj-Ji-5aN" customClass="WeekDaysFromTabBarViewController" customModule="DailyPlanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,15 +40,15 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Week Day Cell Identifier" rowHeight="90" id="x0A-vo-T86" customClass="WeekDayTableViewCell" customModule="DailyPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Week Day Cell Identifier" rowHeight="89" id="x0A-vo-T86" customClass="WeekDayTableViewCell" customModule="DailyPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x0A-vo-T86" id="nJK-Kh-u4G">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9c-3Y-6aS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="89" height="89.666666666666671"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="89" height="88.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="03.09" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehd-Ki-7Sk">
                                                             <rect key="frame" x="22" y="60" width="45" height="21"/>
@@ -70,27 +70,28 @@
                                                         <constraint firstAttribute="width" constant="89" id="3uG-hs-aIP"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ещё много дел!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkZ-CL-Gxc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ещё много дел!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkZ-CL-Gxc">
                                                     <rect key="frame" x="97" y="11" width="177" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0/0 задач" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOU-dJ-Fq7">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/0 задач" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOU-dJ-Fq7">
                                                     <rect key="frame" x="97" y="41" width="77" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="o5z-yB-XUS">
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="o5z-yB-XUS">
                                                     <rect key="frame" x="97" y="70" width="150" height="2"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="D65-i3-eTG"/>
+                                                    </constraints>
                                                 </progressView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7r-8L-MJk">
-                                                    <rect key="frame" x="355" y="28" width="33" height="33"/>
+                                                    <rect key="frame" x="356" y="28" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" image="add_button_icon"/>
                                                     <connections>
                                                         <action selector="addNewToDo:" destination="x0A-vo-T86" eventType="touchUpInside" id="rz4-iJ-juZ"/>
@@ -99,7 +100,13 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="K9c-3Y-6aS" firstAttribute="top" secondItem="nJK-Kh-u4G" secondAttribute="top" id="1cq-WT-qpG"/>
+                                                <constraint firstItem="WOU-dJ-Fq7" firstAttribute="top" secondItem="QkZ-CL-Gxc" secondAttribute="bottom" id="E3c-ob-0Lq"/>
+                                                <constraint firstItem="QkZ-CL-Gxc" firstAttribute="leading" secondItem="K9c-3Y-6aS" secondAttribute="trailing" constant="8" id="N0s-Jq-s5A"/>
                                                 <constraint firstItem="K9c-3Y-6aS" firstAttribute="leading" secondItem="nJK-Kh-u4G" secondAttribute="leading" id="gF8-j8-3gw"/>
+                                                <constraint firstItem="o5z-yB-XUS" firstAttribute="leading" secondItem="WOU-dJ-Fq7" secondAttribute="leading" id="i4E-3O-RVR"/>
+                                                <constraint firstItem="o5z-yB-XUS" firstAttribute="top" secondItem="WOU-dJ-Fq7" secondAttribute="bottom" constant="8" id="kuS-rU-vob"/>
+                                                <constraint firstItem="QkZ-CL-Gxc" firstAttribute="top" secondItem="nJK-Kh-u4G" secondAttribute="topMargin" id="niY-Md-H4H"/>
+                                                <constraint firstItem="WOU-dJ-Fq7" firstAttribute="leading" secondItem="K9c-3Y-6aS" secondAttribute="trailing" constant="8" id="oTo-8e-kFa"/>
                                                 <constraint firstAttribute="bottom" secondItem="K9c-3Y-6aS" secondAttribute="bottom" id="sIz-dM-xt5"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -123,7 +130,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Gd-Cg-RZ0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KFc-Sm-anj"/>
+                    <navigationItem key="navigationItem" title="To-do List" id="KFc-Sm-anj"/>
                     <connections>
                         <outlet property="weekTableView" destination="TGS-XI-VkW" id="M2W-Lv-8yL"/>
                         <segue destination="Or7-h1-8Nq" kind="show" identifier="Adding New ToDo Segue" id="Tj7-7w-jaa"/>

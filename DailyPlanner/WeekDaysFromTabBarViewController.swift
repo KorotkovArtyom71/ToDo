@@ -67,8 +67,8 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
         let cell = tableView.dequeueReusableCell(withIdentifier: "Week Day Cell Identifier") as! WeekDayTableViewCell
         cell.dateLabel.text = dateArray[indexPath.row].stringForLayoutWeek()
         switch indexPath.row {
-        case 0: cell.dayLabel.text = "Mo"
-        case 1: cell.dayLabel.text = "Tu"
+        case 0: cell.dayLabel.text = "MO"
+        case 1: cell.dayLabel.text = "TU"
         case 2: cell.dayLabel.text = "WE"
         case 3: cell.dayLabel.text = "TH"
         case 4: cell.dayLabel.text = "FR"
