@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B3C025621BFFE2F0063BC97 /* PlansForSomeDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C025521BFFE2F0063BC97 /* PlansForSomeDayViewController.swift */; };
 		3BE3764321B7A777003F05E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3764221B7A777003F05E9 /* AppDelegate.swift */; };
 		3BE3764821B7A777003F05E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE3764621B7A777003F05E9 /* Main.storyboard */; };
 		3BE3764A21B7A779003F05E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE3764921B7A779003F05E9 /* Assets.xcassets */; };
@@ -22,11 +23,11 @@
 		3BE3766B21B9947E003F05E9 /* WeekDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3766A21B9947E003F05E9 /* WeekDayTableViewCell.swift */; };
 		3BEFCC4221BBDC960092AA0D /* AddNewToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFCC4121BBDC960092AA0D /* AddNewToDoViewController.swift */; };
 		3BEFCC4421BC167B0092AA0D /* ChooseColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFCC4321BC167B0092AA0D /* ChooseColorCollectionViewCell.swift */; };
-		3BEFCC4621BD65980092AA0D /* PlansForSomeDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFCC4521BD65980092AA0D /* PlansForSomeDayViewController.swift */; };
 		3BEFCC4821BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFCC4721BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B3C025521BFFE2F0063BC97 /* PlansForSomeDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansForSomeDayViewController.swift; sourceTree = "<group>"; };
 		3BE3763F21B7A777003F05E9 /* DailyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE3764221B7A777003F05E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BE3764721B7A777003F05E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		3BE3766A21B9947E003F05E9 /* WeekDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayTableViewCell.swift; sourceTree = "<group>"; };
 		3BEFCC4121BBDC960092AA0D /* AddNewToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToDoViewController.swift; sourceTree = "<group>"; };
 		3BEFCC4321BC167B0092AA0D /* ChooseColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseColorCollectionViewCell.swift; sourceTree = "<group>"; };
-		3BEFCC4521BD65980092AA0D /* PlansForSomeDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansForSomeDayViewController.swift; sourceTree = "<group>"; };
 		3BEFCC4721BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansForSomeDayTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,10 +78,10 @@
 		3BE3764121B7A777003F05E9 /* DailyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				3B3C025521BFFE2F0063BC97 /* PlansForSomeDayViewController.swift */,
 				3BE3764221B7A777003F05E9 /* AppDelegate.swift */,
 				3BE3764621B7A777003F05E9 /* Main.storyboard */,
 				3BEFCC4721BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift */,
-				3BEFCC4521BD65980092AA0D /* PlansForSomeDayViewController.swift */,
 				3BEFCC4321BC167B0092AA0D /* ChooseColorCollectionViewCell.swift */,
 				3BE3766A21B9947E003F05E9 /* WeekDayTableViewCell.swift */,
 				3BEFCC4121BBDC960092AA0D /* AddNewToDoViewController.swift */,
@@ -191,6 +191,7 @@
 				3BE3766121B7FB76003F05E9 /* CalendarFromTabBarViewController.swift in Sources */,
 				3BE3766B21B9947E003F05E9 /* WeekDayTableViewCell.swift in Sources */,
 				3BE3766721B808C6003F05E9 /* MainTabBarViewController.swift in Sources */,
+				3B3C025621BFFE2F0063BC97 /* PlansForSomeDayViewController.swift in Sources */,
 				3BE3764321B7A777003F05E9 /* AppDelegate.swift in Sources */,
 				3BE3766321B7FB8E003F05E9 /* SettingsForAppFromTabBarViewController.swift in Sources */,
 				3BEFCC4221BBDC960092AA0D /* AddNewToDoViewController.swift in Sources */,
@@ -198,7 +199,6 @@
 				3BE3765A21B7AD62003F05E9 /* WeekDay.swift in Sources */,
 				3BEFCC4421BC167B0092AA0D /* ChooseColorCollectionViewCell.swift in Sources */,
 				3BE3765F21B7FB5E003F05E9 /* OtherPlansFromTabBarViewController.swift in Sources */,
-				3BEFCC4621BD65980092AA0D /* PlansForSomeDayViewController.swift in Sources */,
 				3BE3765521B7A809003F05E9 /* DailyPlan.swift in Sources */,
 				3BEFCC4821BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift in Sources */,
 			);

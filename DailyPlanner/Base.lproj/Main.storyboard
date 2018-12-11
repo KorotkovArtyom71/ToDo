@@ -20,7 +20,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eMP-4a-uSE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Priority" image="priority_tab_bar" id="WIB-Xv-d36"/>
+                    <tabBarItem key="tabBarItem" title="Priority" image="priority_tab_bar" id="WIB-Xv-d36">
+                        <color key="badgeColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.4140892551" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XU0-E8-FIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,6 +283,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.20716502570000001" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="f1b-U4-bTf" kind="relationship" relationship="viewControllers" id="IQp-Y4-4td"/>
@@ -302,7 +305,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lFB-lG-DGJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar_tab_bar" id="bPM-Ie-YzA"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar_tab_bar" id="bPM-Ie-YzA">
+                        <color key="badgeColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.4140892551" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igx-9S-k3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -312,7 +317,9 @@
         <scene sceneID="aZY-D4-sZC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f1b-U4-bTf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="To-do List" image="to_do_tab_bar" id="mx0-LH-QSy"/>
+                    <tabBarItem key="tabBarItem" title="To-do List" image="to_do_tab_bar" id="mx0-LH-QSy">
+                        <color key="badgeColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.4140892551" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J8O-EY-IjA">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
