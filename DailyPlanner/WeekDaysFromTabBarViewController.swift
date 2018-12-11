@@ -99,6 +99,9 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
         } else {
             cell.progressView.isHidden = false
         }
+        if dayForCounting.amountOfToDos > 0, dayForCounting.amountOfMadeToDos == 0 {
+            cell.progressView.progress = 0
+        }
         return cell
     }
     
