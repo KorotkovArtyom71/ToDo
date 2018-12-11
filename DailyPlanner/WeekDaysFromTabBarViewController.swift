@@ -93,6 +93,11 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
         let dayForCounting = DaysManager.shared.dayForDate(for: dateArray[indexPath.row])
         //print("\(dayForCounting.date)  \(dayForCounting.amountOfMadeToDos)  \(dayForCounting.amountOfToDos)")
         cell.numberOfMadeToDosLabel.text = "\(dayForCounting.amountOfMadeToDos)/\(dayForCounting.amountOfToDos)"
+        if dayForCounting.amountOfToDos == 0 {
+            cell.progressView.isHidden = true
+        } else {
+            cell.progressView.isHidden = false
+        }
         return cell
     }
     

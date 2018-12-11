@@ -114,6 +114,7 @@
                                             <outlet property="dateLabel" destination="Ehd-Ki-7Sk" id="WpI-uC-dRf"/>
                                             <outlet property="dayLabel" destination="zKV-uh-ZGE" id="lFq-gd-EgP"/>
                                             <outlet property="numberOfMadeToDosLabel" destination="WOU-dJ-Fq7" id="nJr-4M-Iok"/>
+                                            <outlet property="progressView" destination="o5z-yB-XUS" id="HPY-yY-lXy"/>
                                             <outlet property="rootDayView" destination="K9c-3Y-6aS" id="XU0-ba-aJx"/>
                                             <segue destination="roE-pP-p57" kind="show" identifier="Show Day Plans" id="HF2-lh-ZY0"/>
                                         </connections>

@@ -16,6 +16,7 @@ class WeekDayTableViewCell: UITableViewCell {
         resignationHandler?()
     }
     
+    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var rootDayView: UIView!
