@@ -95,6 +95,7 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
         cell.numberOfMadeToDosLabel.text = "\(dayForCounting.amountOfMadeToDos)/\(dayForCounting.amountOfToDos)"
         if dayForCounting.amountOfToDos == 0 {
             cell.progressView.isHidden = true
+            cell.numberOfMadeToDosLabel.text = "0 tasks"
         } else {
             cell.progressView.isHidden = false
         }
