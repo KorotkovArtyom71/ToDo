@@ -44,10 +44,11 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
         //        let weekday3 = calendar.component(.weekday, from: date.addingTimeInterval(86400 * 2))
         let day = NSCalendar.current.component(.day, from: Date())
         let month = NSCalendar.current.component(.month, from: Date())
-        let weekdaysArray = [Weekday.sunday, Weekday.monday, .tuesday, .wednesday, .thursday, .friday, .saturday]
+        let weekdaysArray = [Weekday.monday, .tuesday, .wednesday, .thursday, .friday, .saturday, .sunday]
+        print("\(weekday) WEEKDAY" )
         let todayDate = Date.today()
-        if weekday > 0 {
-            for i in 0...weekday-1 {
+        if weekday > 1 {
+            for i in 1...weekday-1 {
                 dateArray.append( todayDate.addingTimeInterval(-86400.0*(Double(weekday)-Double(i))) )
             }
         }
@@ -55,8 +56,8 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
         dateArray.append(Date.today())
        
         
-        if weekday < 6 {
-            for i in weekday+1...6 {
+        if weekday < 7 {
+            for i in weekday+1...7 {
                 dateArray.append( todayDate.addingTimeInterval(86400.0*(Double(i)-Double(weekday))) )
             }
         }
@@ -66,20 +67,20 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
         let cell = tableView.dequeueReusableCell(withIdentifier: "Week Day Cell Identifier") as! WeekDayTableViewCell
         cell.dateLabel.text = dateArray[indexPath.row].stringForLayoutWeek()
         switch indexPath.row {
-        case 0: cell.dayLabel.text = "SU"
-        case 1: cell.dayLabel.text = "MO"
-        case 2: cell.dayLabel.text = "TU"
-        case 3: cell.dayLabel.text = "WE"
-        case 4: cell.dayLabel.text = "TH"
-        case 5: cell.dayLabel.text = "FR"
-        case 6: cell.dayLabel.text = "SA"
+        case 0: cell.dayLabel.text = "Mo"
+        case 1: cell.dayLabel.text = "Tu"
+        case 2: cell.dayLabel.text = "WE"
+        case 3: cell.dayLabel.text = "TH"
+        case 4: cell.dayLabel.text = "FR"
+        case 5: cell.dayLabel.text = "SA"
+        case 6: cell.dayLabel.text = "SU"
         default: break
         }
         
         let date = Date()
         let calendar = Calendar.current
         let weekday = calendar.component(.weekday, from: date) - 1
-        if indexPath.row == weekday {
+        if indexPath.row == weekday - 1 {
             cell.rootDayView.layer.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         }
         cell.resignationHandler = { [weak self] in
