@@ -16,6 +16,7 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
         didSet {
             weekTableView.dataSource = self
             weekTableView.delegate = self
+            weekTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         }
     }
     
@@ -104,6 +105,7 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
         }
         return cell
     }
+    
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return true

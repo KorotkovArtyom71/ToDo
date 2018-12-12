@@ -16,6 +16,7 @@ class PlansForSomeDayViewController: UIViewController, UITableViewDataSource, UI
         didSet {
             plansTableView.dataSource = self
             plansTableView.delegate = self
+            plansTableView.separatorStyle = .none
         }
     }
     
