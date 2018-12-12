@@ -19,6 +19,7 @@ class AddNewToDoViewController: UIViewController, UITextFieldDelegate, UICollect
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(activateTextField))
         tapGesture.numberOfTapsRequired = 1
         textField?.addGestureRecognizer(tapGesture)
+        self.title = "Add ToDo"
     }
     
     

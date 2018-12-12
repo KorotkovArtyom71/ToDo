@@ -88,9 +88,8 @@
                                                         <constraint firstAttribute="width" constant="150" id="D65-i3-eTG"/>
                                                     </constraints>
                                                 </progressView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7r-8L-MJk">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7r-8L-MJk">
                                                     <rect key="frame" x="361" y="28" width="33" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" image="add_button_icon"/>
                                                     <connections>
@@ -100,7 +99,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="K9c-3Y-6aS" firstAttribute="top" secondItem="nJK-Kh-u4G" secondAttribute="top" id="1cq-WT-qpG"/>
+                                                <constraint firstAttribute="trailing" secondItem="t7r-8L-MJk" secondAttribute="trailing" constant="20" id="7km-8I-ku9"/>
                                                 <constraint firstItem="WOU-dJ-Fq7" firstAttribute="top" secondItem="QkZ-CL-Gxc" secondAttribute="bottom" id="E3c-ob-0Lq"/>
+                                                <constraint firstItem="t7r-8L-MJk" firstAttribute="centerY" secondItem="nJK-Kh-u4G" secondAttribute="centerY" id="Hye-fT-XYj"/>
                                                 <constraint firstItem="QkZ-CL-Gxc" firstAttribute="leading" secondItem="K9c-3Y-6aS" secondAttribute="trailing" constant="8" id="N0s-Jq-s5A"/>
                                                 <constraint firstItem="K9c-3Y-6aS" firstAttribute="leading" secondItem="nJK-Kh-u4G" secondAttribute="leading" id="gF8-j8-3gw"/>
                                                 <constraint firstItem="o5z-yB-XUS" firstAttribute="leading" secondItem="WOU-dJ-Fq7" secondAttribute="leading" id="i4E-3O-RVR"/>

@@ -17,6 +17,7 @@ class PlansForSomeDayViewController: UIViewController, UITableViewDataSource, UI
             plansTableView.dataSource = self
             plansTableView.delegate = self
             plansTableView.separatorStyle = .none
+            self.title = "ToDo"
         }
     }
     
