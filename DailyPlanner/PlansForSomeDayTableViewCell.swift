@@ -18,6 +18,9 @@ class PlansForSomeDayTableViewCell: UITableViewCell {
        resignationHandler?()
     }
     
+   
+    @IBOutlet weak var isCompletedImage: UIImageView!
+    
     @IBOutlet weak var planTitle: UILabel!
     
     @IBOutlet weak var importanColorView: UIView!

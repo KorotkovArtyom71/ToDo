@@ -180,10 +180,16 @@
                                                         <action selector="isCompletedButton:" destination="BwT-uz-K5g" eventType="touchUpInside" id="JSf-QS-F7a"/>
                                                     </connections>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OwT-9p-pfP">
+                                                    <rect key="frame" x="10" y="18" width="41" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imageView" destination="OwT-9p-pfP" id="fzB-ej-zaO"/>
                                             <outlet property="importanColorView" destination="pgq-hs-SXR" id="e8B-wR-VLR"/>
+                                            <outlet property="isCompletedImage" destination="OwT-9p-pfP" id="p7L-K7-4H1"/>
                                             <outlet property="isCompletedLabel" destination="Y4m-qt-442" id="xzX-CL-OKG"/>
                                             <outlet property="planTitle" destination="QjD-da-JxJ" id="AXO-HG-aZd"/>
                                         </connections>

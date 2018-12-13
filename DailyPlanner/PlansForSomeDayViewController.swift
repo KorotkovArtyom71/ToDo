@@ -45,8 +45,8 @@ class PlansForSomeDayViewController: UIViewController, UITableViewDataSource, UI
             cell.importanColorView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         }
         switch day.dayPlans[indexPath.row].isCompleted {
-        case true: cell.isCompletedLabel.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-        case false: cell.isCompletedLabel.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        case true: cell.isCompletedImage.image = UIImage.init(named: "check_button_icon")
+        case false: cell.isCompletedImage.image = UIImage()
         default: break
         }
         cell.resignationHandler = { [weak self] in
