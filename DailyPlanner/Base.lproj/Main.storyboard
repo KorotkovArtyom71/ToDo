@@ -88,9 +88,12 @@
                                                         <constraint firstAttribute="width" constant="150" id="D65-i3-eTG"/>
                                                     </constraints>
                                                 </progressView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7r-8L-MJk">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7r-8L-MJk">
                                                     <rect key="frame" x="361" y="28" width="33" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="33" id="NGP-EX-l1e"/>
+                                                        <constraint firstAttribute="width" constant="33" id="pl5-1O-rh5"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" image="add_button_icon"/>
                                                     <connections>
@@ -107,7 +110,9 @@
                                                 <constraint firstItem="o5z-yB-XUS" firstAttribute="top" secondItem="WOU-dJ-Fq7" secondAttribute="bottom" constant="8" id="kuS-rU-vob"/>
                                                 <constraint firstItem="QkZ-CL-Gxc" firstAttribute="top" secondItem="nJK-Kh-u4G" secondAttribute="topMargin" id="niY-Md-H4H"/>
                                                 <constraint firstItem="WOU-dJ-Fq7" firstAttribute="leading" secondItem="K9c-3Y-6aS" secondAttribute="trailing" constant="8" id="oTo-8e-kFa"/>
+                                                <constraint firstItem="t7r-8L-MJk" firstAttribute="centerY" secondItem="nJK-Kh-u4G" secondAttribute="centerY" id="rh3-zV-and"/>
                                                 <constraint firstAttribute="bottom" secondItem="K9c-3Y-6aS" secondAttribute="bottom" id="sIz-dM-xt5"/>
+                                                <constraint firstAttribute="trailing" secondItem="t7r-8L-MJk" secondAttribute="trailing" constant="20" id="zMd-yz-BAo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
