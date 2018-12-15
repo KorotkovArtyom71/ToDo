@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3B3C025621BFFE2F0063BC97 /* PlansForSomeDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C025521BFFE2F0063BC97 /* PlansForSomeDayViewController.swift */; };
+		3B3C025821C54AF00063BC97 /* PriorityPlansTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C025721C54AF00063BC97 /* PriorityPlansTableViewCell.swift */; };
+		3B3C025C21C54EB20063BC97 /* PriorityPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C025B21C54EB20063BC97 /* PriorityPlans.swift */; };
+		3B3C025E21C551310063BC97 /* AddNewPriorityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C025D21C551310063BC97 /* AddNewPriorityViewController.swift */; };
+		3B3C026021C569EF0063BC97 /* PriorityChooseColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C025F21C569EF0063BC97 /* PriorityChooseColorCollectionViewCell.swift */; };
 		3BE3764321B7A777003F05E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3764221B7A777003F05E9 /* AppDelegate.swift */; };
 		3BE3764821B7A777003F05E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE3764621B7A777003F05E9 /* Main.storyboard */; };
 		3BE3764A21B7A779003F05E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE3764921B7A779003F05E9 /* Assets.xcassets */; };
@@ -28,6 +32,10 @@
 
 /* Begin PBXFileReference section */
 		3B3C025521BFFE2F0063BC97 /* PlansForSomeDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansForSomeDayViewController.swift; sourceTree = "<group>"; };
+		3B3C025721C54AF00063BC97 /* PriorityPlansTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityPlansTableViewCell.swift; sourceTree = "<group>"; };
+		3B3C025B21C54EB20063BC97 /* PriorityPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityPlans.swift; sourceTree = "<group>"; };
+		3B3C025D21C551310063BC97 /* AddNewPriorityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPriorityViewController.swift; sourceTree = "<group>"; };
+		3B3C025F21C569EF0063BC97 /* PriorityChooseColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityChooseColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BE3763F21B7A777003F05E9 /* DailyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE3764221B7A777003F05E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BE3764721B7A777003F05E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,16 +86,19 @@
 		3BE3764121B7A777003F05E9 /* DailyPlanner */ = {
 			isa = PBXGroup;
 			children = (
-				3B3C025521BFFE2F0063BC97 /* PlansForSomeDayViewController.swift */,
 				3BE3764221B7A777003F05E9 /* AppDelegate.swift */,
 				3BE3764621B7A777003F05E9 /* Main.storyboard */,
+				3B3C025F21C569EF0063BC97 /* PriorityChooseColorCollectionViewCell.swift */,
+				3B3C025D21C551310063BC97 /* AddNewPriorityViewController.swift */,
+				3B3C025721C54AF00063BC97 /* PriorityPlansTableViewCell.swift */,
+				3BE3765E21B7FB5E003F05E9 /* OtherPlansFromTabBarViewController.swift */,
+				3B3C025521BFFE2F0063BC97 /* PlansForSomeDayViewController.swift */,
 				3BEFCC4721BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift */,
 				3BEFCC4321BC167B0092AA0D /* ChooseColorCollectionViewCell.swift */,
 				3BE3766A21B9947E003F05E9 /* WeekDayTableViewCell.swift */,
 				3BEFCC4121BBDC960092AA0D /* AddNewToDoViewController.swift */,
 				3BE3766621B808C6003F05E9 /* MainTabBarViewController.swift */,
 				3BE3765C21B7FB3C003F05E9 /* WeekDaysFromTabBarViewController.swift */,
-				3BE3765E21B7FB5E003F05E9 /* OtherPlansFromTabBarViewController.swift */,
 				3BE3766021B7FB76003F05E9 /* CalendarFromTabBarViewController.swift */,
 				3BE3766221B7FB8E003F05E9 /* SettingsForAppFromTabBarViewController.swift */,
 				3BE3764E21B7A779003F05E9 /* Info.plist */,
@@ -102,6 +113,7 @@
 			children = (
 				3BE3766821B81C65003F05E9 /* DaysManager.swift */,
 				3BE3765921B7AD62003F05E9 /* WeekDay.swift */,
+				3B3C025B21C54EB20063BC97 /* PriorityPlans.swift */,
 				3BE3765421B7A809003F05E9 /* DailyPlan.swift */,
 			);
 			path = Model;
@@ -188,6 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE3766921B81C65003F05E9 /* DaysManager.swift in Sources */,
+				3B3C025821C54AF00063BC97 /* PriorityPlansTableViewCell.swift in Sources */,
+				3B3C025E21C551310063BC97 /* AddNewPriorityViewController.swift in Sources */,
 				3BE3766121B7FB76003F05E9 /* CalendarFromTabBarViewController.swift in Sources */,
 				3BE3766B21B9947E003F05E9 /* WeekDayTableViewCell.swift in Sources */,
 				3BE3766721B808C6003F05E9 /* MainTabBarViewController.swift in Sources */,
@@ -200,7 +214,9 @@
 				3BEFCC4421BC167B0092AA0D /* ChooseColorCollectionViewCell.swift in Sources */,
 				3BE3765F21B7FB5E003F05E9 /* OtherPlansFromTabBarViewController.swift in Sources */,
 				3BE3765521B7A809003F05E9 /* DailyPlan.swift in Sources */,
+				3B3C025C21C54EB20063BC97 /* PriorityPlans.swift in Sources */,
 				3BEFCC4821BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift in Sources */,
+				3B3C026021C569EF0063BC97 /* PriorityChooseColorCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
