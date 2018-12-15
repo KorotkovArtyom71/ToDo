@@ -6,9 +6,10 @@
 //  Copyright © 2018 artyom korotkov. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class DaysManager {
+class DaysManager: Codable
+{
     
     var days: [WeekDay]
     func dayForDate(for date: Date) -> WeekDay {
@@ -29,7 +30,19 @@ class DaysManager {
         return weekDay
     }
     
-    static let shared = DaysManager()
+    init?(json: Data) {
+        if let newValue = try? JSONDecoder().decode(DaysManager.self, from: json) {
+            self.days = newValue.days
+        } else {
+            return nil
+        }
+    }
+    
+    var json: Data? {
+        return try? JSONEncoder().encode(self)
+    }
+    
+    static var shared = DaysManager()
     
     init() {
         self.days = [WeekDay]()

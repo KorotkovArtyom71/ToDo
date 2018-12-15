@@ -85,7 +85,6 @@
 				3BEFCC4321BC167B0092AA0D /* ChooseColorCollectionViewCell.swift */,
 				3BE3766A21B9947E003F05E9 /* WeekDayTableViewCell.swift */,
 				3BEFCC4121BBDC960092AA0D /* AddNewToDoViewController.swift */,
-				3BE3766821B81C65003F05E9 /* DaysManager.swift */,
 				3BE3766621B808C6003F05E9 /* MainTabBarViewController.swift */,
 				3BE3765C21B7FB3C003F05E9 /* WeekDaysFromTabBarViewController.swift */,
 				3BE3765E21B7FB5E003F05E9 /* OtherPlansFromTabBarViewController.swift */,
@@ -101,6 +100,7 @@
 		3BE3765621B7ACD1003F05E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3BE3766821B81C65003F05E9 /* DaysManager.swift */,
 				3BE3765921B7AD62003F05E9 /* WeekDay.swift */,
 				3BE3765421B7A809003F05E9 /* DailyPlan.swift */,
 			);

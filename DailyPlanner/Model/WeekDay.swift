@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeekDay {
+class WeekDay : Codable {
     var date = Date()
     var dayPlans = [DailyPlan]()
     
