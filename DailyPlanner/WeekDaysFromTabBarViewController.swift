@@ -89,22 +89,6 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
             self.dateForSegue = self.dateArray[indexPath.row]
             
             self.performSegue(withIdentifier: "Adding New ToDo Segue", sender: cell)
-            if let json = DaysManager.shared.json {
-                if let url = try? FileManager.default.url(
-                    for: .documentDirectory,
-                    in: .userDomainMask,
-                    appropriateFor: nil,
-                    create: true
-                    ).appendingPathComponent("Untitled.json") {
-                    do {
-                        try json.write(to: url)
-                        print("saved succefully!")
-                    } catch let error {
-                        print("couldn't save\(error)")
-                    }
-                }
-                
-            }
         }
         
         let dayForCounting = DaysManager.shared.dayForDate(for: dateArray[indexPath.row])

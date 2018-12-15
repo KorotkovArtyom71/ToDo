@@ -105,7 +105,29 @@ class AddNewToDoViewController: UIViewController, UITextFieldDelegate, UICollect
     
     @IBAction func addNewToDoButton(_ sender: UIBarButtonItem) {
         let plan = DailyPlan(isCompleted: false, day: date, importantColor: colorArray[selectedColorIndex], title: textField.text!)
+        do {
+            let data = try JSONEncoder().encode(plan)
+            print(String(data: data, encoding: .utf8)!)
+            let newTask = try JSONDecoder().decode(DailyPlan.self, from: data)
+            print(newTask)
+        } catch {  print(error) }
         DaysManager.shared.dayForDate(for: date).dayPlans.append(plan!)
+        if let json = DaysManager.shared.json {
+            if let url = try? FileManager.default.url(
+                for: .documentDirectory,
+                in: .userDomainMask,
+                appropriateFor: nil,
+                create: true
+                ).appendingPathComponent("Untitled.json") {
+                do {
+                    try json.write(to: url)
+                    print("saved succefully!")
+                } catch let error {
+                    print("couldn't save\(error)")
+                }
+            }
+            
+        }
         self.navigationController?.popViewController(animated: true)
     }
 }

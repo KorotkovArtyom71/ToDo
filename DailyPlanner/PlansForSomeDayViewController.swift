@@ -52,6 +52,22 @@ class PlansForSomeDayViewController: UIViewController, UITableViewDataSource, UI
         cell.resignationHandler = { [weak self] in
             guard let self = self else { return }
             self.day.dayPlans[indexPath.row].isCompleted = !self.day.dayPlans[indexPath.row].isCompleted
+            if let json = DaysManager.shared.json {
+                if let url = try? FileManager.default.url(
+                    for: .documentDirectory,
+                    in: .userDomainMask,
+                    appropriateFor: nil,
+                    create: true
+                    ).appendingPathComponent("Untitled.json") {
+                    do {
+                        try json.write(to: url)
+                        print("saved succefully!")
+                    } catch let error {
+                        print("couldn't save\(error)")
+                    }
+                }
+                
+            }
             self.plansTableView.reloadData()
         }
         return cell
