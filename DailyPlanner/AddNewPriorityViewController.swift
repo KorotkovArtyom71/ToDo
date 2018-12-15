@@ -111,13 +111,13 @@ class AddNewPriorityViewController: UIViewController, UICollectionViewDataSource
             print(newTask)
         } catch {  print(error) }
         PriorityPlans.sharedPlans.dayPlans.append(plan!)
-        if let json = DaysManager.shared.json {
+        if let json = PriorityPlans.sharedPlans.json {
             if let url = try? FileManager.default.url(
                 for: .documentDirectory,
                 in: .userDomainMask,
                 appropriateFor: nil,
                 create: true
-                ).appendingPathComponent("Untitled2.json") {
+                ).appendingPathComponent("OtherFile.json") {
                 do {
                     try json.write(to: url)
                     print("saved succefully!")
@@ -125,7 +125,6 @@ class AddNewPriorityViewController: UIViewController, UICollectionViewDataSource
                     print("couldn't save\(error)")
                 }
             }
-            
         }
         self.navigationController?.popViewController(animated: true)
     }

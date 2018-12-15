@@ -56,7 +56,7 @@ class OtherPlansFromTabBarViewController: UIViewController, UITableViewDataSourc
                     in: .userDomainMask,
                     appropriateFor: nil,
                     create: true
-                    ).appendingPathComponent("Untitled2.json") {
+                    ).appendingPathComponent("OtherFile.json") {
                     do {
                         try json.write(to: url)
                         print("saved succefully!")
@@ -79,6 +79,8 @@ class OtherPlansFromTabBarViewController: UIViewController, UITableViewDataSourc
         }
     }
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         plansTableView.reloadData()
@@ -88,11 +90,13 @@ class OtherPlansFromTabBarViewController: UIViewController, UITableViewDataSourc
             in: .userDomainMask,
             appropriateFor: nil,
             create: true
-            ).appendingPathComponent("Untitled2.json") {
+            ).appendingPathComponent("OtherFile.json") {
             if let jsonData = try? Data(contentsOf: url) {
                 PriorityPlans.sharedPlans = PriorityPlans(json: jsonData)!
+            } else {
+                print("Ok")
             }
         }
-        
+
     }
 }
