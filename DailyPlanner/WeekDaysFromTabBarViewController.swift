@@ -40,7 +40,7 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
         
         let date = Date()
         let calendar = Calendar.current
-        let weekday = calendar.component(.weekday, from: date) - 1
+        var weekday = calendar.component(.weekday, from: date) - 1
         //        let weekday2 = calendar.component(.weekday, from: date.addingTimeInterval(86400))
         //        let weekday3 = calendar.component(.weekday, from: date.addingTimeInterval(86400 * 2))
         let day = NSCalendar.current.component(.day, from: Date())
@@ -48,6 +48,9 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
         let weekdaysArray = [Weekday.monday, .tuesday, .wednesday, .thursday, .friday, .saturday, .sunday]
         print("\(weekday) WEEKDAY" )
         let todayDate = Date.today()
+        if weekday == 0 {
+            weekday = 7
+        }
         if weekday > 1 {
             for i in 1...weekday-1 {
                 dateArray.append( todayDate.addingTimeInterval(-86400.0*(Double(weekday)-Double(i))) )
@@ -80,7 +83,10 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
         
         let date = Date()
         let calendar = Calendar.current
-        let weekday = calendar.component(.weekday, from: date) - 1
+        var weekday = calendar.component(.weekday, from: date) - 1
+        if weekday == 0 {
+            weekday = 7
+        }
         if indexPath.row == weekday - 1 {
             cell.rootDayView.layer.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         }
