@@ -28,6 +28,8 @@
 		3BEFCC4221BBDC960092AA0D /* AddNewToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFCC4121BBDC960092AA0D /* AddNewToDoViewController.swift */; };
 		3BEFCC4421BC167B0092AA0D /* ChooseColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFCC4321BC167B0092AA0D /* ChooseColorCollectionViewCell.swift */; };
 		3BEFCC4821BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFCC4721BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift */; };
+		3BFD22E021C95C29002B292D /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD22DF21C95C29002B292D /* DateCollectionViewCell.swift */; };
+		3BFD22E221C95D3E002B292D /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD22E121C95D3E002B292D /* CalendarVars.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		3BEFCC4121BBDC960092AA0D /* AddNewToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToDoViewController.swift; sourceTree = "<group>"; };
 		3BEFCC4321BC167B0092AA0D /* ChooseColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BEFCC4721BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansForSomeDayTableViewCell.swift; sourceTree = "<group>"; };
+		3BFD22DF21C95C29002B292D /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BFD22E121C95D3E002B292D /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +119,7 @@
 				3B3C026121C65F200063BC97 /* Priority */,
 				3B3C026221C65F440063BC97 /* WeekDays */,
 				3BE3766621B808C6003F05E9 /* MainTabBarViewController.swift */,
-				3BE3766021B7FB76003F05E9 /* CalendarFromTabBarViewController.swift */,
+				3BFD22DE21C95920002B292D /* Calendar */,
 				3BE3766221B7FB8E003F05E9 /* SettingsForAppFromTabBarViewController.swift */,
 				3BE3764E21B7A779003F05E9 /* Info.plist */,
 				3BE3765621B7ACD1003F05E9 /* Model */,
@@ -142,6 +146,16 @@
 				3BE3764921B7A779003F05E9 /* Assets.xcassets */,
 			);
 			path = "Supported Files";
+			sourceTree = "<group>";
+		};
+		3BFD22DE21C95920002B292D /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				3BE3766021B7FB76003F05E9 /* CalendarFromTabBarViewController.swift */,
+				3BFD22E121C95D3E002B292D /* CalendarVars.swift */,
+				3BFD22DF21C95C29002B292D /* DateCollectionViewCell.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +232,7 @@
 				3BE3766921B81C65003F05E9 /* DaysManager.swift in Sources */,
 				3B3C025821C54AF00063BC97 /* PriorityPlansTableViewCell.swift in Sources */,
 				3B3C025E21C551310063BC97 /* AddNewPriorityViewController.swift in Sources */,
+				3BFD22E221C95D3E002B292D /* CalendarVars.swift in Sources */,
 				3BE3766121B7FB76003F05E9 /* CalendarFromTabBarViewController.swift in Sources */,
 				3BE3766B21B9947E003F05E9 /* WeekDayTableViewCell.swift in Sources */,
 				3BE3766721B808C6003F05E9 /* MainTabBarViewController.swift in Sources */,
@@ -228,6 +243,7 @@
 				3BE3765D21B7FB3C003F05E9 /* WeekDaysFromTabBarViewController.swift in Sources */,
 				3BE3765A21B7AD62003F05E9 /* WeekDay.swift in Sources */,
 				3BEFCC4421BC167B0092AA0D /* ChooseColorCollectionViewCell.swift in Sources */,
+				3BFD22E021C95C29002B292D /* DateCollectionViewCell.swift in Sources */,
 				3BE3765F21B7FB5E003F05E9 /* OtherPlansFromTabBarViewController.swift in Sources */,
 				3BE3765521B7A809003F05E9 /* DailyPlan.swift in Sources */,
 				3B3C025C21C54EB20063BC97 /* PriorityPlans.swift in Sources */,
