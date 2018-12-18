@@ -44,7 +44,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edU-2S-hh9">
                                                     <rect key="frame" x="68" y="18" width="277" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -103,15 +103,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFj-ZN-OUd">
-                                <rect key="frame" x="46" y="134" width="344" height="174"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="174" id="ifR-4h-3hg"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="73E-2D-XfX">
                                 <rect key="frame" x="24" y="384" width="366" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -162,23 +153,37 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvi-nC-CtA">
-                                <rect key="frame" x="186" y="610" width="43" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvi-nC-CtA">
+                                <rect key="frame" x="182" y="555" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="878-al-ylP"/>
+                                    <constraint firstAttribute="width" constant="50" id="k4g-gv-Xh2"/>
+                                </constraints>
                                 <state key="normal" image="check_button_icon"/>
                                 <connections>
                                     <action selector="addNewToDoButton:" destination="AW3-ae-r09" eventType="touchUpInside" id="qxr-1v-PyV"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFj-ZN-OUd">
+                                <rect key="frame" x="24" y="134" width="366" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="ifR-4h-3hg"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Yvi-nC-CtA" firstAttribute="centerX" secondItem="Sl5-ug-JwV" secondAttribute="centerX" id="1eZ-Z2-MIa"/>
+                            <constraint firstItem="hFj-ZN-OUd" firstAttribute="leading" secondItem="Sl5-ug-JwV" secondAttribute="leading" constant="24" id="3z5-ol-Ang"/>
                             <constraint firstItem="Sl5-ug-JwV" firstAttribute="trailing" secondItem="73E-2D-XfX" secondAttribute="trailing" constant="24" id="4oB-Zf-4fL"/>
                             <constraint firstItem="hFj-ZN-OUd" firstAttribute="top" secondItem="Sl5-ug-JwV" secondAttribute="top" constant="46" id="BzR-c8-nRq"/>
+                            <constraint firstItem="Sl5-ug-JwV" firstAttribute="trailing" secondItem="hFj-ZN-OUd" secondAttribute="trailing" constant="24" id="F2v-5N-Jvk"/>
                             <constraint firstItem="73E-2D-XfX" firstAttribute="leading" secondItem="Sl5-ug-JwV" secondAttribute="leading" constant="24" id="Jqq-bH-OQG"/>
-                            <constraint firstItem="Sl5-ug-JwV" firstAttribute="trailing" secondItem="hFj-ZN-OUd" secondAttribute="trailing" constant="24" id="OH1-o3-i0z"/>
+                            <constraint firstItem="Yvi-nC-CtA" firstAttribute="top" secondItem="73E-2D-XfX" secondAttribute="bottom" constant="43" id="Pcd-is-IqZ"/>
                             <constraint firstItem="73E-2D-XfX" firstAttribute="top" secondItem="Sl5-ug-JwV" secondAttribute="top" constant="296" id="YXb-Iv-jmA"/>
-                            <constraint firstItem="hFj-ZN-OUd" firstAttribute="leading" secondItem="Sl5-ug-JwV" secondAttribute="leading" constant="46" id="wXT-47-A9q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sl5-ug-JwV"/>
                     </view>
@@ -331,7 +336,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjD-da-JxJ">
                                                     <rect key="frame" x="68" y="18" width="277" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

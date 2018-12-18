@@ -67,6 +67,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B3C026121C65F200063BC97 /* Priority */ = {
+			isa = PBXGroup;
+			children = (
+				3B3C025721C54AF00063BC97 /* PriorityPlansTableViewCell.swift */,
+				3B3C025F21C569EF0063BC97 /* PriorityChooseColorCollectionViewCell.swift */,
+				3BE3765E21B7FB5E003F05E9 /* OtherPlansFromTabBarViewController.swift */,
+				3B3C025D21C551310063BC97 /* AddNewPriorityViewController.swift */,
+			);
+			path = Priority;
+			sourceTree = "<group>";
+		};
+		3B3C026221C65F440063BC97 /* WeekDays */ = {
+			isa = PBXGroup;
+			children = (
+				3BEFCC4721BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift */,
+				3BEFCC4321BC167B0092AA0D /* ChooseColorCollectionViewCell.swift */,
+				3BE3766A21B9947E003F05E9 /* WeekDayTableViewCell.swift */,
+				3BEFCC4121BBDC960092AA0D /* AddNewToDoViewController.swift */,
+				3B3C025521BFFE2F0063BC97 /* PlansForSomeDayViewController.swift */,
+				3BE3765C21B7FB3C003F05E9 /* WeekDaysFromTabBarViewController.swift */,
+			);
+			path = WeekDays;
+			sourceTree = "<group>";
+		};
 		3BE3763621B7A777003F05E9 = {
 			isa = PBXGroup;
 			children = (
@@ -88,17 +112,9 @@
 			children = (
 				3BE3764221B7A777003F05E9 /* AppDelegate.swift */,
 				3BE3764621B7A777003F05E9 /* Main.storyboard */,
-				3B3C025F21C569EF0063BC97 /* PriorityChooseColorCollectionViewCell.swift */,
-				3B3C025D21C551310063BC97 /* AddNewPriorityViewController.swift */,
-				3B3C025721C54AF00063BC97 /* PriorityPlansTableViewCell.swift */,
-				3BE3765E21B7FB5E003F05E9 /* OtherPlansFromTabBarViewController.swift */,
-				3B3C025521BFFE2F0063BC97 /* PlansForSomeDayViewController.swift */,
-				3BEFCC4721BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift */,
-				3BEFCC4321BC167B0092AA0D /* ChooseColorCollectionViewCell.swift */,
-				3BE3766A21B9947E003F05E9 /* WeekDayTableViewCell.swift */,
-				3BEFCC4121BBDC960092AA0D /* AddNewToDoViewController.swift */,
+				3B3C026121C65F200063BC97 /* Priority */,
+				3B3C026221C65F440063BC97 /* WeekDays */,
 				3BE3766621B808C6003F05E9 /* MainTabBarViewController.swift */,
-				3BE3765C21B7FB3C003F05E9 /* WeekDaysFromTabBarViewController.swift */,
 				3BE3766021B7FB76003F05E9 /* CalendarFromTabBarViewController.swift */,
 				3BE3766221B7FB8E003F05E9 /* SettingsForAppFromTabBarViewController.swift */,
 				3BE3764E21B7A779003F05E9 /* Info.plist */,
