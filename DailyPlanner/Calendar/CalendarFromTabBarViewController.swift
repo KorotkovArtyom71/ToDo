@@ -53,6 +53,16 @@ class CalendarFromTabBarViewController: UIViewController, UICollectionViewDelega
             month = 11
             year -= 1
             direction = -1
+            if leapYearCounter > 0 {
+                leapYearCounter -= 1
+            }
+            if leapYearCounter != 0  {
+                dayInMonths[1] = 28
+            }
+            if leapYearCounter == 0 {
+                dayInMonths[1] = 29
+                leapYearCounter = 4
+            }
             getStartDateDayPosition()
             currentMonth = months[month]
             monthLabel.text = "\(currentMonth) \(year)"
