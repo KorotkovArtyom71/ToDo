@@ -185,4 +185,23 @@ class CalendarFromTabBarViewController: UIViewController, UICollectionViewDelega
         return cell
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Show Plans For Some Day From Calnedar Segue" {
+            if let cell = sender as? DateCollectionViewCell {
+                if let indexPath = calendarCollectionView.indexPath(for: cell) {
+                    if Int(cell.dateLabel.text!)! >= 1, let vc = segue.destination.contents as? PlansForSomeDayFromCalendarViewController {
+                        print(indexPath.row)
+                        let dateForCounting = calendar.date(from: DateComponents(year: year, month: month + 1, day: Int(cell.dateLabel.text!)!))
+                        let dayForCounting = DaysManager.shared.dayForDate(for: dateForCounting!)
+                        vc.day = dayForCounting
+                    }
+                }
+            }
+        }
+    }
+    
 }

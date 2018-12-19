@@ -30,6 +30,8 @@
 		3BEFCC4821BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFCC4721BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift */; };
 		3BFD22E021C95C29002B292D /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD22DF21C95C29002B292D /* DateCollectionViewCell.swift */; };
 		3BFD22E221C95D3E002B292D /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD22E121C95D3E002B292D /* CalendarVars.swift */; };
+		3BFD22E421CAA571002B292D /* PlansForSomeDayFromCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD22E321CAA571002B292D /* PlansForSomeDayFromCalendarViewController.swift */; };
+		3BFD22E621CAA661002B292D /* PlansForSomeDayFromCalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD22E521CAA661002B292D /* PlansForSomeDayFromCalendarTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		3BEFCC4721BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansForSomeDayTableViewCell.swift; sourceTree = "<group>"; };
 		3BFD22DF21C95C29002B292D /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BFD22E121C95D3E002B292D /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
+		3BFD22E321CAA571002B292D /* PlansForSomeDayFromCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansForSomeDayFromCalendarViewController.swift; sourceTree = "<group>"; };
+		3BFD22E521CAA661002B292D /* PlansForSomeDayFromCalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansForSomeDayFromCalendarTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 		3BFD22DE21C95920002B292D /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				3BFD22E521CAA661002B292D /* PlansForSomeDayFromCalendarTableViewCell.swift */,
+				3BFD22E321CAA571002B292D /* PlansForSomeDayFromCalendarViewController.swift */,
 				3BE3766021B7FB76003F05E9 /* CalendarFromTabBarViewController.swift */,
 				3BFD22E121C95D3E002B292D /* CalendarVars.swift */,
 				3BFD22DF21C95C29002B292D /* DateCollectionViewCell.swift */,
@@ -243,12 +249,14 @@
 				3BE3765D21B7FB3C003F05E9 /* WeekDaysFromTabBarViewController.swift in Sources */,
 				3BE3765A21B7AD62003F05E9 /* WeekDay.swift in Sources */,
 				3BEFCC4421BC167B0092AA0D /* ChooseColorCollectionViewCell.swift in Sources */,
+				3BFD22E421CAA571002B292D /* PlansForSomeDayFromCalendarViewController.swift in Sources */,
 				3BFD22E021C95C29002B292D /* DateCollectionViewCell.swift in Sources */,
 				3BE3765F21B7FB5E003F05E9 /* OtherPlansFromTabBarViewController.swift in Sources */,
 				3BE3765521B7A809003F05E9 /* DailyPlan.swift in Sources */,
 				3B3C025C21C54EB20063BC97 /* PriorityPlans.swift in Sources */,
 				3BEFCC4821BD69E20092AA0D /* PlansForSomeDayTableViewCell.swift in Sources */,
 				3B3C026021C569EF0063BC97 /* PriorityChooseColorCollectionViewCell.swift in Sources */,
+				3BFD22E621CAA661002B292D /* PlansForSomeDayFromCalendarTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
