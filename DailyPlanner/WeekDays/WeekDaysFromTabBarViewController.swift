@@ -34,9 +34,29 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
     
     var dateArray = [Date]()
     
+    @objc func changeWeekToPrevious() {
+        for i in 0...6 {
+            dateArray[i] -= 604800
+        }
+        weekTableView.reloadData()
+    }
+    
+    @objc func changeWeekToNext() {
+        for i in 0...6 {
+            dateArray[i] += 604800
+        }
+        weekTableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(changeWeekToNext))
+        swipeLeft.direction = .left
+        self.weekTableView.addGestureRecognizer(swipeLeft)
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(changeWeekToPrevious))
+        swipeRight.direction = .right
+        self.weekTableView.addGestureRecognizer(swipeRight)
         
         let date = Date()
         let calendar = Calendar.current
