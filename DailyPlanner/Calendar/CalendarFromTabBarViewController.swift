@@ -12,7 +12,7 @@ class CalendarFromTabBarViewController: UIViewController, UICollectionViewDelega
     
     @IBOutlet weak var monthLabel: UILabel!
     
-    @IBAction func nextButton(_ sender: UIButton) {
+   @objc func changeToNextMonth() {
         switch currentMonth {
         case "December":
             month = 0
@@ -33,7 +33,7 @@ class CalendarFromTabBarViewController: UIViewController, UICollectionViewDelega
             }
             
             getStartDateDayPosition()
-            currentMonth = months[month] 
+            currentMonth = months[month]
             monthLabel.text = "\(currentMonth) \(year)"
             calendarCollectionView.reloadData()
         default:
@@ -44,10 +44,13 @@ class CalendarFromTabBarViewController: UIViewController, UICollectionViewDelega
             monthLabel.text = "\(currentMonth) \(year)"
             calendarCollectionView.reloadData()
         }
-        
     }
     
-    @IBAction func backButton(_ sender: UIButton) {
+    @IBAction func nextButton(_ sender: UIButton) {
+        changeToNextMonth()
+    }
+    
+    @objc func changeToPreviousMonth() {
         switch currentMonth {
         case "January":
             month = 11
@@ -75,6 +78,10 @@ class CalendarFromTabBarViewController: UIViewController, UICollectionViewDelega
             monthLabel.text = "\(currentMonth) \(year)"
             calendarCollectionView.reloadData()
         }
+    }
+    
+    @IBAction func backButton(_ sender: UIButton) {
+        changeToPreviousMonth()
     }
     
     func getStartDateDayPosition() {
@@ -129,6 +136,14 @@ class CalendarFromTabBarViewController: UIViewController, UICollectionViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(changeToNextMonth))
+        swipeLeft.direction = .left
+        self.calendarCollectionView.addGestureRecognizer(swipeLeft)
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(changeToPreviousMonth))
+        swipeRight.direction = .right
+        self.calendarCollectionView.addGestureRecognizer(swipeRight)
+        
         currentMonth = months[month]
         monthLabel.text = "\(currentMonth) \(year)"
         if weekday == 0 {
