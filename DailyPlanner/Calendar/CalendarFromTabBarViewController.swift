@@ -13,6 +13,7 @@ class CalendarFromTabBarViewController: UIViewController, UICollectionViewDelega
     @IBOutlet weak var monthLabel: UILabel!
     
    @objc func changeToNextMonth() {
+        self.calendarCollectionView.slideInFromRight()
         switch currentMonth {
         case "December":
             month = 0
@@ -51,6 +52,7 @@ class CalendarFromTabBarViewController: UIViewController, UICollectionViewDelega
     }
     
     @objc func changeToPreviousMonth() {
+        self.calendarCollectionView.slideInFromLeft()
         switch currentMonth {
         case "January":
             month = 11
