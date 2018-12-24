@@ -50,25 +50,19 @@ class OtherPlansFromTabBarViewController: UIViewController, UITableViewDataSourc
         cell.resignationHandler = { [weak self] in
             guard let self = self else { return }
             PriorityPlans.sharedPlans.dayPlans[indexPath.row].isCompleted = !PriorityPlans.sharedPlans.dayPlans[indexPath.row].isCompleted
-            if let json = PriorityPlans.sharedPlans.json {
-                if let url = try? FileManager.default.url(
-                    for: .documentDirectory,
-                    in: .userDomainMask,
-                    appropriateFor: nil,
-                    create: true
-                    ).appendingPathComponent("OtherFile.json") {
-                    do {
-                        try json.write(to: url)
-                        print("saved succefully!")
-                    } catch let error {
-                        print("couldn't save\(error)")
-                    }
-                }
-                
-            }
+            self.saveChanges()
             self.plansTableView.reloadData()
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
+            PriorityPlans.sharedPlans.dayPlans.remove(at: indexPath.row)
+            plansTableView.deleteRows(at: [indexPath], with: .fade)
+            saveChanges()
+        } else if editingStyle == .insert {
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,6 +70,25 @@ class OtherPlansFromTabBarViewController: UIViewController, UITableViewDataSourc
             if let vc = segue.destination.contents as? AddNewPriorityViewController {
                 
             }
+        }
+    }
+    
+    func saveChanges() {
+        if let json = PriorityPlans.sharedPlans.json {
+            if let url = try? FileManager.default.url(
+                for: .documentDirectory,
+                in: .userDomainMask,
+                appropriateFor: nil,
+                create: true
+                ).appendingPathComponent("OtherFile.json") {
+                do {
+                    try json.write(to: url)
+                    print("saved succefully!")
+                } catch let error {
+                    print("couldn't save\(error)")
+                }
+            }
+            
         }
     }
     
