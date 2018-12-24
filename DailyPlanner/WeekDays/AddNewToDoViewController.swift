@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddNewToDoViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate
+class AddNewToDoViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 {
     var selectedColorIndex = 0
     var date = Date()
@@ -93,13 +93,21 @@ class AddNewToDoViewController: UIViewController, UITextFieldDelegate, UICollect
         } else {
             cell.imageView.alpha = 0.0
         }
-        cell.rootView.layer.cornerRadius = 25
+        cell.rootView.layer.cornerRadius = cell.frame.width / 2
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedColorIndex = indexPath.row
         collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (view.frame.width - 108) / 6, height: (view.frame.width - 108) / 6)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
     }
     
     

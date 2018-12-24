@@ -8,7 +8,10 @@
 
 import UIKit
 
-class AddNewPriorityViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
+class AddNewPriorityViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate, UICollectionViewDelegateFlowLayout {
+    
+    
+    
     var selectedColorIndex = 0
     var date = Date()
     var colorArray = [#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1),#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1),#colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1),#colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1),#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1),#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 0.4140892551),#colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1),#colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1),#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1),#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1),#colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1),#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)]
@@ -47,6 +50,7 @@ class AddNewPriorityViewController: UIViewController, UICollectionViewDataSource
         return true
     }
     
+   
     
     @IBOutlet weak var chooseColorCollectionView: UICollectionView! {
         didSet {
@@ -92,7 +96,7 @@ class AddNewPriorityViewController: UIViewController, UICollectionViewDataSource
         } else {
             cell.selectedImageView.alpha = 0.0
         }
-        cell.rootView.layer.cornerRadius = 25
+        cell.rootView.layer.cornerRadius = cell.frame.width / 2
         return cell
     }
     
@@ -100,6 +104,15 @@ class AddNewPriorityViewController: UIViewController, UICollectionViewDataSource
         self.selectedColorIndex = indexPath.row
         collectionView.reloadData()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (view.frame.width - 108) / 6, height: (view.frame.width - 108) / 6)
+    }
+   
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
     
     
     @IBAction func addNewToDoButton(_ sender: UIButton) {
