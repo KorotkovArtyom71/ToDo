@@ -8,14 +8,14 @@
 
 import UIKit
 
-class AddNewToDoViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
+class AddNewToDoViewController: UIViewController, UITextViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 {
     var selectedColorIndex = 0
     var date = Date()
     var colorArray = [#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1),#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1),#colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1),#colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1),#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1),#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 0.4140892551),#colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1),#colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1),#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1),#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1),#colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1),#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)]
     override func awakeFromNib() {
         super.awakeFromNib()
-        textField?.isEnabled = false
+        textField?.isEditable = false
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(activateTextField))
         tapGesture.numberOfTapsRequired = 1
         textField?.addGestureRecognizer(tapGesture)
@@ -24,30 +24,38 @@ class AddNewToDoViewController: UIViewController, UITextFieldDelegate, UICollect
     
     
     @objc func activateTextField() {
-        textField?.isEnabled = true
+        textField?.isEditable = true
         textField?.becomeFirstResponder()
     }
     
-    @IBOutlet weak var textField: UITextField! {
+    @IBOutlet weak var textField: UITextView! {
         didSet {
             textField.delegate = self
             textField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             textField.layer.borderWidth = 1
-            textField.borderStyle = .roundedRect
+            //textField.borderStyle = .roundedRect
         }
     }
     
     var resignationHandler: (() -> Void)?
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func textViewDidEndEditing(_ textView: UITextView) {
         resignationHandler?()
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         textField.resignFirstResponder()
+        textField.isEditable = false
         return true
     }
     
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textField.resignFirstResponder()
+            return false
+        }
+        return true
+    }
     
     @IBOutlet weak var chooseColorCollectionView: UICollectionView! {
         didSet {

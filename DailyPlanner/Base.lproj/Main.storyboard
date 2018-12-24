@@ -154,15 +154,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFj-ZN-OUd">
-                                <rect key="frame" x="24" y="134" width="366" height="174"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="174" id="ifR-4h-3hg"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvi-nC-CtA">
                                 <rect key="frame" x="182" y="473" width="50" height="50"/>
                                 <constraints>
@@ -174,23 +165,32 @@
                                     <action selector="addNewToDoButton:" destination="AW3-ae-r09" eventType="touchUpInside" id="qxr-1v-PyV"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lVz-i9-YBf">
+                                <rect key="frame" x="24" y="134" width="366" height="174"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="AOp-qX-Q8p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Yvi-nC-CtA" firstAttribute="centerX" secondItem="Sl5-ug-JwV" secondAttribute="centerX" id="1eZ-Z2-MIa"/>
-                            <constraint firstItem="hFj-ZN-OUd" firstAttribute="leading" secondItem="Sl5-ug-JwV" secondAttribute="leading" constant="24" id="3z5-ol-Ang"/>
                             <constraint firstItem="Sl5-ug-JwV" firstAttribute="trailing" secondItem="73E-2D-XfX" secondAttribute="trailing" constant="24" id="4oB-Zf-4fL"/>
-                            <constraint firstItem="73E-2D-XfX" firstAttribute="top" secondItem="hFj-ZN-OUd" secondAttribute="bottom" constant="25" id="9yW-QF-qHc"/>
-                            <constraint firstItem="hFj-ZN-OUd" firstAttribute="top" secondItem="Sl5-ug-JwV" secondAttribute="top" constant="46" id="BzR-c8-nRq"/>
-                            <constraint firstItem="Sl5-ug-JwV" firstAttribute="trailing" secondItem="hFj-ZN-OUd" secondAttribute="trailing" constant="24" id="F2v-5N-Jvk"/>
+                            <constraint firstItem="lVz-i9-YBf" firstAttribute="leading" secondItem="Sl5-ug-JwV" secondAttribute="leading" constant="24" id="Dd5-y3-iI7"/>
                             <constraint firstItem="73E-2D-XfX" firstAttribute="leading" secondItem="Sl5-ug-JwV" secondAttribute="leading" constant="24" id="Jqq-bH-OQG"/>
+                            <constraint firstItem="Sl5-ug-JwV" firstAttribute="trailing" secondItem="lVz-i9-YBf" secondAttribute="trailing" constant="24" id="NBG-5g-fvm"/>
                             <constraint firstItem="Yvi-nC-CtA" firstAttribute="top" secondItem="73E-2D-XfX" secondAttribute="bottom" constant="25" id="cuu-J9-adw"/>
+                            <constraint firstItem="73E-2D-XfX" firstAttribute="top" secondItem="lVz-i9-YBf" secondAttribute="bottom" constant="25" id="dj7-r8-Fec"/>
+                            <constraint firstItem="lVz-i9-YBf" firstAttribute="top" secondItem="Sl5-ug-JwV" secondAttribute="top" constant="46" id="zpa-kp-B0u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sl5-ug-JwV"/>
                     </view>
                     <connections>
                         <outlet property="chooseColorCollectionView" destination="73E-2D-XfX" id="ffh-ox-PyF"/>
-                        <outlet property="textField" destination="hFj-ZN-OUd" id="JRc-Ea-e8a"/>
+                        <outlet property="textField" destination="lVz-i9-YBf" id="6Ql-OP-yir"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbV-Ne-5YX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -403,15 +403,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oqn-nG-516">
-                                <rect key="frame" x="24" y="134" width="366" height="174"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="174" id="I6d-9c-0x8"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ofn-VT-muC">
                                 <rect key="frame" x="24" y="333" width="366" height="141"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -463,15 +454,24 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HC6-zB-jAI">
+                                <rect key="frame" x="24" y="134" width="366" height="174"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="rbD-dh-EEN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uK7-l4-7mV" firstAttribute="trailing" secondItem="ofn-VT-muC" secondAttribute="trailing" constant="24" id="3te-JF-Ixu"/>
-                            <constraint firstItem="ofn-VT-muC" firstAttribute="top" secondItem="oqn-nG-516" secondAttribute="bottom" constant="25" id="Bq8-Bu-CWN"/>
-                            <constraint firstItem="oqn-nG-516" firstAttribute="leading" secondItem="uK7-l4-7mV" secondAttribute="leading" constant="24" id="OAL-J2-CAn"/>
-                            <constraint firstItem="oqn-nG-516" firstAttribute="top" secondItem="uK7-l4-7mV" secondAttribute="top" constant="46" id="Y87-uT-yhl"/>
+                            <constraint firstItem="uK7-l4-7mV" firstAttribute="trailing" secondItem="HC6-zB-jAI" secondAttribute="trailing" constant="24" id="K1H-Co-bUO"/>
+                            <constraint firstItem="HC6-zB-jAI" firstAttribute="leading" secondItem="uK7-l4-7mV" secondAttribute="leading" constant="24" id="cGG-fD-Ey7"/>
+                            <constraint firstItem="HC6-zB-jAI" firstAttribute="top" secondItem="uK7-l4-7mV" secondAttribute="top" constant="46" id="cht-sD-ZMj"/>
                             <constraint firstItem="ofn-VT-muC" firstAttribute="leading" secondItem="uK7-l4-7mV" secondAttribute="leading" constant="24" id="jgb-d7-gUv"/>
-                            <constraint firstItem="uK7-l4-7mV" firstAttribute="trailing" secondItem="oqn-nG-516" secondAttribute="trailing" constant="24" id="p2J-cF-p1S"/>
+                            <constraint firstItem="ofn-VT-muC" firstAttribute="top" secondItem="HC6-zB-jAI" secondAttribute="bottom" constant="25" id="s0Y-Wu-7Hc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uK7-l4-7mV"/>
                     </view>
@@ -485,7 +485,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="chooseColorCollectionView" destination="ofn-VT-muC" id="65v-9F-bHX"/>
-                        <outlet property="textField" destination="oqn-nG-516" id="Zul-Mi-8gC"/>
+                        <outlet property="textField" destination="HC6-zB-jAI" id="5BA-WQ-Y52"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ut-Cv-H50" userLabel="First Responder" sceneMemberID="firstResponder"/>
