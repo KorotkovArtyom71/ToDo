@@ -127,10 +127,7 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
             cell.numberOfMadeToDosLabel.text = "0 tasks"
         } else {
             cell.progressView.isHidden = false
-            cell.progressView.progress = 1/2
-        }
-        if dayForCounting.amountOfToDos > 0, dayForCounting.amountOfMadeToDos == 0 {
-            cell.progressView.progress = 0
+            cell.progressView.setProgress(Float(Double(dayForCounting.amountOfMadeToDos) / Double(dayForCounting.amountOfToDos)), animated: false)
         }
         return cell
     }
@@ -147,6 +144,7 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
                     if let vc = segue.destination.contents as? AddNewToDoViewController {
                         print(indexPath.row)
                         vc.date = self.dateForSegue
+                        vc.isChanging = false
                     }
                 }
             }

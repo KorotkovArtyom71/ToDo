@@ -11,10 +11,12 @@ import UIKit
 class AddNewPriorityViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextViewDelegate, UICollectionViewDelegateFlowLayout {
     
     
-    
+    var dailyPlan: DailyPlan?
     var selectedColorIndex = 0
     var date = Date()
     var colorArray = [#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1),#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1),#colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1),#colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1),#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1),#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 0.4140892551),#colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1),#colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1),#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1),#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1),#colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1),#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)]
+    var isChanging = Bool()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         textField?.isEditable = false
@@ -22,6 +24,15 @@ class AddNewPriorityViewController: UIViewController, UICollectionViewDataSource
         tapGesture.numberOfTapsRequired = 1
         textField?.addGestureRecognizer(tapGesture)
         self.title = "Add Priority"
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if dailyPlan != nil {
+            textField.text = dailyPlan?.title
+        } else {
+            textField.text = ""
+        }
     }
     
     
@@ -133,7 +144,13 @@ class AddNewPriorityViewController: UIViewController, UICollectionViewDataSource
             let newTask = try JSONDecoder().decode(DailyPlan.self, from: data)
             print(newTask)
         } catch {  print(error) }
-        PriorityPlans.sharedPlans.dayPlans.append(plan!)
+        switch isChanging {
+        case true: dailyPlan?.title = textField.text!
+        dailyPlan?.importantColor = colorArray[selectedColorIndex]
+        dailyPlan?.isCompleted = false
+        case false: PriorityPlans.sharedPlans.dayPlans.append(plan!)
+        default: break
+        }
         if let json = PriorityPlans.sharedPlans.json {
             if let url = try? FileManager.default.url(
                 for: .documentDirectory,

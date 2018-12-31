@@ -68,9 +68,21 @@ class OtherPlansFromTabBarViewController: UIViewController, UITableViewDataSourc
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Add New Priority Segue" {
             if let vc = segue.destination.contents as? AddNewPriorityViewController {
-                
+                vc.isChanging = false
             }
-        }
+        } else {
+            if segue.identifier == "Changing Existing Priority" {
+                if let cell = sender as? PriorityPlansTableViewCell {
+                    if let indexPath = plansTableView.indexPath(for: cell) {
+                        if let vc = segue.destination as? AddNewPriorityViewController {
+//                            print(indexPath.row)
+//                            print(day.dayPlans[indexPath.row].title)
+                            vc.dailyPlan = PriorityPlans.sharedPlans.dayPlans[indexPath.row]
+                            vc.isChanging = true
+                        }
+                    }
+                }
+            }        }
     }
     
     func saveChanges() {
