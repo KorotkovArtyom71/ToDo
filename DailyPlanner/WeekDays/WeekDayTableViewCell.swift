@@ -21,4 +21,5 @@ class WeekDayTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var rootDayView: UIView!
     @IBOutlet weak var numberOfMadeToDosLabel: UILabel!
+    @IBOutlet weak var activityLabel: UILabel!
 }

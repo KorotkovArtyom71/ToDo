@@ -53,7 +53,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="rzd-NN-mtk"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edU-2S-hh9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edU-2S-hh9">
                                                     <rect key="frame" x="68" y="18" width="277" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="24"/>
@@ -251,8 +251,8 @@
                                                         <constraint firstAttribute="width" constant="89" id="3uG-hs-aIP"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ещё много дел!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkZ-CL-Gxc">
-                                                    <rect key="frame" x="97.000000000000014" y="11" width="159.33333333333337" height="23"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No tasks yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkZ-CL-Gxc">
+                                                    <rect key="frame" x="97" y="11" width="126.33333333333331" height="23"/>
                                                     <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -297,6 +297,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="activityLabel" destination="QkZ-CL-Gxc" id="R67-Gk-Ggv"/>
                                             <outlet property="dateLabel" destination="Ehd-Ki-7Sk" id="WpI-uC-dRf"/>
                                             <outlet property="dayLabel" destination="zKV-uh-ZGE" id="lFq-gd-EgP"/>
                                             <outlet property="numberOfMadeToDosLabel" destination="WOU-dJ-Fq7" id="nJr-4M-Iok"/>
@@ -822,7 +823,7 @@
         <image name="to_do_tab_bar" width="51.775279998779297" height="51.775279998779297"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mPe-N8-8ij"/>
+        <segue reference="Tj7-7w-jaa"/>
         <segue reference="oDM-lv-sVD"/>
     </inferredMetricsTieBreakers>
 </document>

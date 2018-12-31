@@ -127,7 +127,21 @@ class WeekDaysFromTabBarViewController: UIViewController, UITableViewDelegate, U
             cell.numberOfMadeToDosLabel.text = "0 tasks"
         } else {
             cell.progressView.isHidden = false
-            cell.progressView.setProgress(Float(Double(dayForCounting.amountOfMadeToDos) / Double(dayForCounting.amountOfToDos)), animated: false)
+            let compareFloat = Float(Double(dayForCounting.amountOfMadeToDos) / Double(dayForCounting.amountOfToDos))
+            cell.progressView.setProgress(compareFloat, animated: false)
+            if dayForCounting.amountOfToDos == 0 {
+                cell.activityLabel.text = "No tasks yet"
+            }
+            if compareFloat < 0.5 && dayForCounting.amountOfToDos != 0 {
+                cell.activityLabel.text = "Don't stop"
+            }
+            if dayForCounting.amountOfMadeToDos == dayForCounting.amountOfToDos && dayForCounting.amountOfToDos != 0 {
+                cell.activityLabel.text = "Good job!"
+            } else {
+                if compareFloat >= 0.5 {
+                    cell.activityLabel.text = "You're close"
+                }
+            }
         }
         return cell
     }
