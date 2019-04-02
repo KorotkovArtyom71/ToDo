@@ -275,7 +275,7 @@
                                                         <constraint firstAttribute="height" constant="33" id="NGP-EX-l1e"/>
                                                         <constraint firstAttribute="width" constant="33" id="pl5-1O-rh5"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <state key="normal" image="add_button_icon"/>
                                                     <connections>
                                                         <action selector="addNewToDo:" destination="x0A-vo-T86" eventType="touchUpInside" id="rz4-iJ-juZ"/>
